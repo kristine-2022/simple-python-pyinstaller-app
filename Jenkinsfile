@@ -7,7 +7,12 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo $NODE_NAME
+                echo 'Hello World'
+            }
+            script {
+              sh """
+              hostname
+              """
             }
         }
     }
