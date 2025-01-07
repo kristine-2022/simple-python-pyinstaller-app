@@ -9,10 +9,14 @@ pipeline {
             steps {
                 echo 'Hello World'
             }
-            script {
-              sh """
-              hostname
-              """
+        }
+        stage('Setup') { // Install any dependencies you need to perform testing
+            steps {
+                script {
+                  sh """
+                  hostname
+                  """
+                }
             }
         }
     }
